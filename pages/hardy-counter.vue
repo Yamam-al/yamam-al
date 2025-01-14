@@ -2,7 +2,9 @@
     <div class="container">
       <h1>Hardy Counter</h1>
       <div class="counter">{{ counter.days }} Tage, {{ counter.hours }} Stunden, {{ counter.minutes }} Minuten</div>
-      <button @click="resetCounter">Counter zurücksetzen</button>
+      <button> <NuxtLink to="/hurdy-counter-reset"
+        >Counter zurücksetzen</NuxtLink
+      ></button>
     </div>
   </template>
   
@@ -31,10 +33,7 @@
   
         this.counter = { days, hours, minutes };
       },
-      resetCounter() {
-        this.initialDate = new Date(); // Neues Initialdatum setzen
-        this.calculateCounter();
-      },
+     
     },
     mounted() {
       this.calculateCounter();
