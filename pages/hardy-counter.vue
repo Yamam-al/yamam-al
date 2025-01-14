@@ -2,7 +2,7 @@
     <div class="container">
       <h1>Hardy Counter</h1>
       <div class="counter">{{ counter.days }} Tage, {{ counter.hours }} Stunden, {{ counter.minutes }} Minuten</div>
-      <button> <NuxtLink to="/hurdy-counter-reset"
+      <button> <NuxtLink to="/hardy-counter-reset"
         >Counter zurücksetzen</NuxtLink
       ></button>
     </div>
