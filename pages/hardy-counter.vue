@@ -13,7 +13,7 @@
     layout: 'counterLayout', // Spezielle Layout-Datei verwenden
     data() {
       return {
-        initialDate: new Date('2025-01-14T17:30:00'), // Initialdatum
+        initialDate: null,
         counter: {
           days: 0,
           hours: 0,
@@ -35,7 +35,8 @@
       },
      
     },
-    mounted() {
+    async mounted() {
+      this.initialDate = await getLastCalledData()
       this.calculateCounter();
       this.interval = setInterval(this.calculateCounter, 60000); // Jede Minute aktualisieren
     },
