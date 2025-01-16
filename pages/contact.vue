@@ -1,5 +1,10 @@
 <template>
   <div>
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail: <a href="mailto:alshoufani@gmail.com">alshoufani@gmail.com</a>
+    </p>
+
     <h1>Impressum</h1>
 
     <h2>Angaben gemäß § 5 TMG</h2>
@@ -9,13 +14,6 @@
       22041 Hamburg<br />
       Deutschland
     </p>
-
-    <h2>Kontakt</h2>
-    <p>
-      Telefon: [Telefonnummer]<br />
-      E-Mail: <a href="mailto:alshoufani@gmail.com">alshoufani@gmail.com</a>
-    </p>
-
 
     <h2>Redaktionell verantwortlich</h2>
     <p>
