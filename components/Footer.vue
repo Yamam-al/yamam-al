@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-      <p>&copy; 2025.  Alle Rechte vorbehalten.</p>
+      <p>&copy; 2025.&nbsp;  Alle Rechte vorbehalten.&nbsp;<a style="color: grey;" href="/impressum">Impressum</a></p>
     </footer>
   </template>
   
