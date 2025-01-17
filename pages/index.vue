@@ -159,4 +159,24 @@ h2 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   object-fit: cover;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    grid-template-rows: auto; /* Adapt rows dynamically */
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-areas:
+      "left"
+      "right"
+      "bottom"; /* Stack all sections vertically */
+    height: auto; /* Allow height to grow dynamically */
+  }
+
+  .left-section,
+  .right-section,
+  .bottom-section {
+    grid-column: 1 / -1; /* Each section takes full width */
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+}
 </style>
