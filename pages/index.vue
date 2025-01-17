@@ -11,10 +11,9 @@
     />
     </div>
     <div class="right-section">
-      <h2>Latest Pics</h2>
       <div class="instagram-feed">
-        <div v-for="(img, index) in galleryImages" :key="index" class="image-card">
-          <img :src="img.src" :alt="img.alt" />
+        <div v-for="(imgSrc) in galleryImages" class="image-card">
+          <img :src="imgSrc"/>
         </div>
       </div>
     </div>
@@ -33,6 +32,12 @@
 
 <script>
 import photoPath from '@/static/photos/pp.jpg';
+import photo1 from '@/static/photos/photo1.jpg';
+import photo2 from '@/static/photos/photo2.jpg';
+import photo3 from '@/static/photos/photo3.jpg';
+import photo4 from '@/static/photos/photo4.jpg';
+import photo5 from '@/static/photos/photo5.jpg';
+import photo6 from '@/static/photos/photo6.jpg';
       
 export default {
   data() {
@@ -41,12 +46,12 @@ export default {
       instagramImages: [],
       memeOfTheDay: null,
       galleryImages: [
-        { src: '/static/photos/photo1.jpg', alt: 'Photo 1' },
-        { src: '/static/photos/photo2.jpg', alt: 'Photo 2' },
-        { src: '/static/photos/photo3.jpg', alt: 'Photo 3' },
-        { src: '/static/photos/photo4.jpg', alt: 'Photo 4' },
-        { src: '/static/photos/photo5.jpg', alt: 'Photo 5' },
-        { src: '/static/photos/photo6.jpg', alt: 'Photo 6' },
+        photo1,
+        photo2,
+        photo3,
+        photo4,
+        photo5,
+        photo6
       ],
     };
   },
@@ -54,7 +59,7 @@ export default {
     try {
       // Fetch Meme of the Day
       const response = await fetch(
-        'https://www.reddit.com/r/dankmemes/top/.json?limit=1'
+        'https://www.reddit.com/r/ProgrammerHumor/top/.json?limit=1'
       );
       const data = await response.json();
       const meme = data.data.children[0].data;
@@ -103,9 +108,9 @@ export default {
 .right-section {
   grid-area: right; /* Platziere im Grid-Bereich 'right' */
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
+  flex-direction: column;
   background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
