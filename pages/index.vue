@@ -92,9 +92,10 @@ export default {
     'bottom bottom'; /* Unten nimmt beide Spalten ein */
   height: 100vh; /* Gesamte Höhe des Bildschirms */
   gap: 20px;
-  padding: 20px;
+  padding: 40px 20px 20px; /* Top padding added here */
   max-width: 80%; /* Maximal 80% der Bildschirmbreite */
   margin: 0 auto; /* Zentriert den Inhalt horizontal */
+  margin-top: 40px;
   background-color: #f9f9f9;
   border-radius: 10px; /* Optional: Abrundung für das Gesamt-Layout */
 }
