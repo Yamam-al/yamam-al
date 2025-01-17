@@ -7,7 +7,7 @@
         pronouns="he/him"
         birthdate="22.09.00"
         location="🗺️ Swaida ➡️ Essen ➡️ Hamburg 🗺️"
-        extra="✨🏳️‍🌈✨"
+        extra=""
         email="alshoufani@gmail.com"
         github="https://github.com/Yamam-al"
         instagram="https://www.instagram.com/yamam.al"
