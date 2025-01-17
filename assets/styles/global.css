@@ -1,11 +1,12 @@
 /* assets/styles/global.css */
 html,
 body {
+  min-height: 100%;
   margin: 0;
   margin-bottom: 50px;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #386279, #bed4d8); /* Moderner Farbverlauf */
+  background:rgb(150, 126, 128); /* Moderner Farbverlauf */
   color: #333; /* Allgemeine Textfarbe */
   min-height: 100%; /* Mindestens die volle Höhe des Viewports */
   box-sizing: border-box;
@@ -38,4 +39,79 @@ button:hover {
 
 button a {
   color: white;
+}
+
+/* Grid Layout */
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr; /* Zwei Reihen: Oben und Unten */
+  grid-template-columns: 1fr 1fr; /* Zwei Spalten für oben */
+  grid-template-areas:
+    'left right'
+    'bottom bottom'; /* Unten nimmt beide Spalten ein */
+  height: 100vh; /* Gesamte Höhe des Bildschirms */
+  gap: 20px;
+  padding: 40px 20px 20px; /* Top padding added here */
+  max-width: 80%; /* Maximal 80% der Bildschirmbreite */
+  margin: 0 auto; /* Zentriert den Inhalt horizontal */
+  margin-top: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px; /* Optional: Abrundung für das Gesamt-Layout */
+  min-height: 100vh;
+}
+
+
+.left-section {
+  grid-area: left; /* Platziere im Grid-Bereich 'left' */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.right-section {
+  grid-area: right; /* Platziere im Grid-Bereich 'right' */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-section {
+  grid-area: bottom; /* Platziere im Grid-Bereich 'bottom' */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ececec;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    grid-template-rows: auto; /* Adapt rows dynamically */
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-areas:
+      "left"
+      "right"
+      "bottom"; /* Stack all sections vertically */
+    height: auto; /* Allow height to grow dynamically */
+  }
+
+  .left-section,
+  .right-section,
+  .bottom-section {
+    grid-column: 1 / -1; /* Each section takes full width */
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
 }
