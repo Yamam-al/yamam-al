@@ -2,13 +2,19 @@
   <div class="container">
     <div class="left-section info-card">
       <InfoCard
-      :photo="profilePhoto"
-      name="Yamam Al Shoufani"
-      pronouns="he/him"
-      birthdate="22.09.00"
-      location="🗺️ Swaida ➡️ Essen ➡️ Hamburg 🗺️"
-      extra="✨🏳️‍🌈✨"
-    />
+        :photo="profilePhoto"
+        name="Yamam Al Shoufani"
+        pronouns="he/him"
+        birthdate="22.09.00"
+        location="🗺️ Swaida ➡️ Essen ➡️ Hamburg 🗺️"
+        extra="✨🏳️‍🌈✨"
+        email="alshoufani@gmail.com"
+        github="https://github.com/Yamam-al"
+        instagram="https://www.instagram.com/yamam.al"
+        telegram="https://t.me/yamam_al"
+        snapchat="https://www.snapchat.com/add/yamam.al"
+      />
+
     </div>
     <div class="right-section">
       <div class="instagram-feed">

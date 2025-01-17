@@ -6,39 +6,79 @@
       <p class="birthdate">{{ birthdate }}</p>
       <p class="location">{{ location }}</p>
       <p class="extra">{{ extra }}</p>
+
+      <!-- Social Media Panel -->
+      <div class="social-media-panel">
+        <a :href="'mailto:' + email" target="_blank" class="social-icon" aria-label="Email">
+          <font-awesome-icon icon="envelope" />
+        </a>
+        <a :href="github" target="_blank" class="social-icon" aria-label="GitHub">
+          <font-awesome-icon :icon="['fab', 'github']" />
+        </a>
+        <a :href="instagram" target="_blank" class="social-icon" aria-label="Instagram">
+          <font-awesome-icon :icon="['fab', 'instagram']" />
+        </a>
+        <a :href="telegram" target="_blank" class="social-icon" aria-label="Telegram">
+          <font-awesome-icon :icon="['fab', 'telegram']" />
+        </a>
+        <a :href="snapchat" target="_blank" class="social-icon" aria-label="Snapchat">
+          <font-awesome-icon :icon="['fab', 'snapchat']" />
+        </a>
+      </div>
     </div>
   </template>
   
   <script>
-  export default {
-    props: {
-      photo: {
-        type: String,
-        required: true,
-      },
-      name: {
-        type: String,
-        required: true,
-      },
-      pronouns: {
-        type: String,
-        required: true,
-      },
-      birthdate: {
-        type: String,
-        required: true,
-      },
-      location: {
-        type: String,
-        required: true,
-      },
-      extra: {
-        type: String,
-        required: true,
-      },
+export default {
+  props: {
+    photo: {
+      type: String,
+      required: true,
     },
-  };
-  </script>
+    name: {
+      type: String,
+      required: true,
+    },
+    pronouns: {
+      type: String,
+      required: true,
+    },
+    birthdate: {
+      type: String,
+      required: true,
+    },
+    location: {
+      type: String,
+      required: true,
+    },
+    extra: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    github: {
+      type: String,
+      required: true,
+    },
+    instagram: {
+      type: String,
+      required: true,
+    },
+    telegram: {
+      type: String,
+      required: true,
+    },
+    snapchat: {
+      type: String,
+      required: true,
+    },
+  },
+};
+</script>
+
   
   <style scoped>
   .info-card {
@@ -78,5 +118,23 @@
     font-weight: bold;
     color: #ff69b4;
   }
+  .social-media-panel {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .social-icon {
+    color: #555;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #ff69b4; /* Pink highlight on hover */
+  }
+  
   </style>
   

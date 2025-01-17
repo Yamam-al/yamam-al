@@ -6,6 +6,6 @@ export default defineNuxtConfig({
     '@/assets/styles/global.css', // Pfad zur globalen CSS-Datei
   ],
   components: true,
-  
+  plugins: ['~/plugins/fontawesome.js'],
 
 })
