@@ -1,3 +1,29 @@
+# Dynamic Personal Website
+
+## Description
+A responsive personal website built with Nuxt.js. The site includes:
+- A profile card with personal information and social media links.
+- An image gallery with custom photos.
+- "Meme of the Day" fetched from the Reddit subreddit `r/ProgrammerHumor`.
+- A dynamic footer with opacity transitions based on scroll behavior.
+
+---
+
+## Features
+- Fully responsive design for desktop and mobile devices.
+- Dynamic content with JavaScript and API integration.
+- Interactive elements, such as a gallery and an animated footer.
+
+---
+
+## Technologies
+- **Framework**: Nuxt.js (Vue 3)
+- **CSS**: Flexbox, CSS Grid
+- **API**: Reddit API (for `r/ProgrammerHumor`)
+
+---
+
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
