@@ -25,13 +25,14 @@
     </div>
     <div class="bottom-section">
       <h1>Meme Of The Day</h1>
-      <h2>{{ memeOfTheDay?.title }}</h2>
+      <h3>{{ memeOfTheDay?.title }}</h3>
       <img
         class="memeImg"
         v-if="memeOfTheDay"
         :src="memeOfTheDay.url"
         :alt="memeOfTheDay.title"
       />
+      <p class="small-text">found on <a href="https://www.reddit.com/r/ProgrammerHumor/?rdt=43431">r/ProgrammerHumor</a></p>
     </div>
   </div>
 </template>
@@ -110,6 +111,10 @@ h2 {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   object-fit: cover;
+}
+.small-text{
+  color: gray;
+  font-size: small;
 }
 
 </style>

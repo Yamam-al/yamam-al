@@ -58,6 +58,8 @@ button a {
   background-color: #f9f9f9;
   border-radius: 10px; /* Optional: Abrundung für das Gesamt-Layout */
   min-height: 100vh;
+  background-image: url("/static/photos/rainbow.jpg");
+  background-size: 100%;
 }
 
 
@@ -70,6 +72,7 @@ button a {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ 
 }
 
 .right-section {
